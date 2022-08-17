@@ -2,6 +2,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
+require('./config/mongoose')
 const express = require('express')
 const methodOverride = require('method-override')
 // const passport = require('./config/passport')

@@ -1,9 +1,9 @@
 const userServices = require('../../services/user-services')
 
-const resumeController = {
-  getResumes: (req, res, next) => {
-    userServices.getResumes(req, (err, data) => err ? next(err) : res.json(data))
+const userController = {
+  getUserResumes: (req, res, next) => {
+    userServices.getUserResumes(req, (err, data) => err ? next(err) : res.json(data))
   }
 }
 
-module.exports = resumeController
+module.exports = userController

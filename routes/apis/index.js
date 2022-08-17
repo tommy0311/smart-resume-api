@@ -2,10 +2,12 @@ const express = require('express')
 const router = express.Router()
 
 const userController = require('../../controllers/apis/user-controller')
+const resumeController = require('../../controllers/apis/resume-controller')
 
 const { apiErrorHandler } = require('../../middleware/error-handler')
 
-router.get('/users/:id/resumes', userController.getResumes)
+router.get('/users/:id/resumes', userController.getUserResumes)
+router.get('/resumes/:id', resumeController.getResume)
 
 router.use('/', apiErrorHandler)
 

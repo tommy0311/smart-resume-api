@@ -1,6 +1,6 @@
 
-const resumeServices = {
-  getResumes: (req, cb) => {
+const userServices = {
+  getUserResumes: (req, cb) => {
     try {
       return cb(null, {})
     } catch (err) {
@@ -9,4 +9,4 @@ const resumeServices = {
   }
 }
 
-module.exports = resumeServices
+module.exports = userServices
