@@ -8,6 +8,7 @@ const { apiErrorHandler } = require('../../middleware/error-handler')
 
 router.get('/users/:id/resumes', userController.getUserResumes)
 router.get('/resumes/:id', resumeController.getResume)
+router.put('/resumes/:id', resumeController.putResume)
 
 router.use('/', apiErrorHandler)
 
