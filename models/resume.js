@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const Icons = require('./icon')
+const Icon = require('./icon')
+const Work = require('./work')
 
 const resumeSchema = new Schema({
   resumeName: {
@@ -24,7 +25,11 @@ const resumeSchema = new Schema({
     default: ''
   },
   skills: {
-    type: [Icons.schema],
+    type: [Icon.schema],
+    default: []
+  },
+  experience: {
+    type: [Work.schema],
     default: []
   },
   userId: {

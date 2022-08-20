@@ -1,12 +1,8 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const IconSchema = new Schema({
+const TechSchema = new Schema({
   name: {
-    type: String,
-    default: ''
-  },
-  class: {
     type: String,
     default: ''
   },
@@ -16,4 +12,4 @@ const IconSchema = new Schema({
   }
 })
 
-module.exports = mongoose.model('Icon', IconSchema)
+module.exports = mongoose.model('Tech', TechSchema)
