@@ -4,7 +4,7 @@ const resumeServices = {
   getResume: async (req, cb) => {
     try {
       const resume = await Resume.findById(req.params.id)
-      return cb(null, resume)
+      return cb(null, resume.toJSON())
     } catch (err) {
       return cb(err)
     }
