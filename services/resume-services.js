@@ -17,14 +17,7 @@ const resumeServices = {
         return cb(Error("Resume didn't exist!"))
       }
 
-      const updateData = {}
-      typeof req.body.resumeName === 'string' && (updateData.resumeName = req.body.resumeName)
-      typeof req.body.title === 'string' && (updateData.title = req.body.title)
-      typeof req.body.description_header === 'string' && (updateData.description_header = req.body.description_header)
-      typeof req.body.description === 'string' && (updateData.description = req.body.description)
-      Array.isArray(req.body.skills) && (updateData.skills = req.body.skills)
-
-      await resume.update(updateData)
+      await resume.update({ body: req.body })
 
       return cb(null, resume.toJSON())
     } catch (err) {

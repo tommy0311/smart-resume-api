@@ -10,7 +10,7 @@ const {
   createBasicInfo,
   createIcons,
   createProjects,
-  createWork,
+  createWorks,
   createTechs
 } = require('./resumeFactory')
 
@@ -19,14 +19,17 @@ db.once('open', async () => {
     const userDemo = await UserModel.findOne({ account: 'demo' })
     const userId = userDemo._id
 
-    const work = createWork()
-    work.technologies = createTechs()
+    let works = createWorks()
+    works = works.map(work => {
+      work.technologies = createTechs()
+      return work
+    })
 
     const body = {
       basicInfo: createBasicInfo(),
       skills: createIcons(),
       projects: createProjects(),
-      experience: [work]
+      experience: works
     }
 
     await Resume.create({

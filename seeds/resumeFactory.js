@@ -1,11 +1,20 @@
-const createWork = () => {
-  return {
-    id: (Date.now() + Math.random()).toString(36),
-    company: 'My Company',
-    title: 'My Title',
-    years: '2020 - Present',
-    createdAt: Date.now()
-  }
+const createWorks = () => {
+  return [
+    {
+      id: (Date.now() + Math.random()).toString(36),
+      company: 'My Company1',
+      title: 'My Title',
+      years: '2020 - Present',
+      createdAt: Date.now()
+    },
+    {
+      id: (Date.now() + Math.random()).toString(36),
+      company: 'My Company2',
+      title: 'My Title',
+      years: '2020 - Present',
+      createdAt: Date.now()
+    }
+  ]
 }
 
 const createIcons = () => {
@@ -15,8 +24,9 @@ const createIcons = () => {
       class: 'devicon-html5-plain',
       select: true
     },
-    {
-      name: 'CSS 3',
+    
+
+    
       class: 'devicon-css3-plain',
       select: true
     },
@@ -206,13 +216,16 @@ const createBasicInfo = () => {
       {
         name: 'instagram',
         url: 'https://www.instagram.com',
+
+
+        
         class: 'fab fa-instagram'
       }
     ],
     image: 'myProfile.jpg',
     description_header: 'Hi',
     description: "👋 I'm Davina Griss. Fictional person for preview purposes :) I'm working with newest front-end frameworks like Angular, React and Vue. What you are seeing now is portfolio template from Dorota1997. If you like this portfolio template, make sure to ⭐ the repository to make it more recognizable for other users. Thank you 💜",
-    section_name: {
+    sectionName: {
       about: 'About me',
       projects: 'Projects',
       skills: 'Skills',
@@ -221,4 +234,4 @@ const createBasicInfo = () => {
   }
 }
 
-module.exports = { createWork, createIcons, createTechs, createProjects, createBasicInfo }
+module.exports = { createWorks, createIcons, createTechs, createProjects, createBasicInfo }
