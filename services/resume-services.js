@@ -1,4 +1,5 @@
 const Resume = require('../models/resume')
+const { createTechs } = require('../seeds/resumeFactory')
 
 const resumeServices = {
   getResume: async (req, cb) => {
@@ -20,6 +21,14 @@ const resumeServices = {
       await resume.update({ body: req.body })
 
       return cb(null, resume.toJSON())
+    } catch (err) {
+      return cb(err)
+    }
+  },
+  getTechnologies: async (req, cb) => {
+    try {
+      const technologies = createTechs()
+      return cb(null, technologies)
     } catch (err) {
       return cb(err)
     }

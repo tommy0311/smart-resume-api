@@ -2,15 +2,17 @@ const createWorks = () => {
   return [
     {
       id: (Date.now() + Math.random()).toString(36),
-      company: 'My Company1',
-      title: 'My Title',
+      company: 'company1',
+      title: 'title1',
+      description: 'description1',
       years: '2020 - Present',
       createdAt: Date.now()
     },
     {
       id: (Date.now() + Math.random()).toString(36),
-      company: 'My Company2',
-      title: 'My Title',
+      company: 'company2',
+      title: 'title2',
+      description: 'description2',
       years: '2020 - Present',
       createdAt: Date.now()
     }
