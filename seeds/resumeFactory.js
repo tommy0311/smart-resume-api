@@ -24,9 +24,8 @@ const createIcons = () => {
       class: 'devicon-html5-plain',
       select: true
     },
-    
-
-    
+    {
+      name: 'CSS 3',
       class: 'devicon-css3-plain',
       select: true
     },
@@ -217,8 +216,6 @@ const createBasicInfo = () => {
         name: 'instagram',
         url: 'https://www.instagram.com',
 
-
-        
         class: 'fab fa-instagram'
       }
     ],
