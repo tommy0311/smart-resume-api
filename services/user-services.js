@@ -1,12 +1,7 @@
 
+const Resume = require('../models/resume')
 const userServices = {
-  getUserResumes: (req, cb) => {
-    try {
-      return cb(null, {})
-    } catch (err) {
-      return cb(err)
-    }
-  }
+
 }
 
 module.exports = userServices

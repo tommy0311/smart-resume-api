@@ -9,6 +9,9 @@ const resumeController = {
   },
   getTechnologies: (req, res, next) => {
     resumeServices.getTechnologies(req, (err, data) => err ? next(err) : res.json(data))
+  },
+  getResumes: (req, res, next) => {
+    resumeServices.getResumes(req, (err, data) => err ? next(err) : res.json(data))
   }
 }
 

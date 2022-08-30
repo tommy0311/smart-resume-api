@@ -32,6 +32,21 @@ const resumeServices = {
     } catch (err) {
       return cb(err)
     }
+  },
+  getResumes: async (req, cb) => {
+    try {
+      const result = await Resume.find({ userId: "62fc6babf3108f95d2220910" }).lean()
+      const resumes = result.map((resume) => {
+        return {
+          resumeId: resume._id,
+          userId: resume.userId,
+          name: resume.body.basicInfo.resumeName
+        }
+      })
+      return cb(null, resumes)
+    } catch (err) {
+      return cb(err)
+    }
   }
 }
 
