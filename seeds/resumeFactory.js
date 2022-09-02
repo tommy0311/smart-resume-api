@@ -210,19 +210,23 @@ const createBasicInfo = () => {
     titles: ['Front-end Developer', 'Senior Data Engineer', 'Dev Team lead', 'Mobile App Developer'],
     social: [
       {
-        name: 'github',
-        url: 'https://github.com',
-        class: 'fab fa-github'
+        "name": "mail",
+        "url": "mailto:#",
+        "class": "fa fa-envelope"
       },
       {
-        name: 'instagram',
-        url: 'https://www.instagram.com',
-
-        class: 'fab fa-instagram'
+        "name": "linkedin",
+        "url": "#",
+        "class": "fab fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "#",
+        "class": "fab fa-github"
       }
     ],
     image: 'myProfile.jpg',
-    description_header: 'Hi',
+    descriptionHeader: 'Hi :)',
     description: "👋 I'm Davina Griss. Fictional person for preview purposes :) I'm working with newest front-end frameworks like Angular, React and Vue. What you are seeing now is portfolio template from Dorota1997. If you like this portfolio template, make sure to ⭐ the repository to make it more recognizable for other users. Thank you 💜",
     sectionName: {
       about: 'About me',

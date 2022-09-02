@@ -11,12 +11,7 @@ const seedUser1 = {
   password: 'demo'
 }
 
-const seedUser2 = {
-  account: 'user1',
-  password: '12345678'
-}
-
-const seedUsers = [seedUser1, seedUser2]
+const seedUsers = [seedUser1]
 
 db.once('open', async () => {
   try {

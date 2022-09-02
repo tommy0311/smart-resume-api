@@ -16,7 +16,7 @@ const {
 
 db.once('open', async () => {
   try {
-    const userDemo = await UserModel.findOne({ account: 'demo' })
+    const userDemo = await UserModel.findOne({ account: 'tchen' })
     const userId = userDemo._id
 
     let works = createWorks()

@@ -18,7 +18,7 @@ const resumeServices = {
         return cb(Error("Resume didn't exist!"))
       }
 
-      await resume.update({ body: req.body })
+      await resume.updateOne({ body: req.body })
 
       return cb(null, resume.toJSON())
     } catch (err) {
@@ -35,7 +35,7 @@ const resumeServices = {
   },
   getResumes: async (req, cb) => {
     try {
-      const result = await Resume.find({ userId: "62fc6babf3108f95d2220910" }).lean()
+      const result = await Resume.find({ userId: req.user._id }).lean()
       const resumes = result.map((resume) => {
         return {
           resumeId: resume._id,
