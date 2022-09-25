@@ -22,49 +22,44 @@ const createWorks = () => {
 const createIcons = () => {
   return [
     {
-      name: 'HTML 5',
-      class: 'devicon-html5-plain',
-      select: true
+      "name": "HTML 5",
+      "class": "devicon-html5-plain",
+      "select": true
     },
     {
-      name: 'CSS 3',
-      class: 'devicon-css3-plain',
-      select: true
+      "name": "CSS 3",
+      "class": "devicon-css3-plain",
+      "select": true
     },
     {
-      name: 'Angular',
-      class: 'devicon-angularjs-plain',
-      select: false
+      "name": "JavaScript",
+      "class": "devicon-javascript-plain",
+      "select": true
     },
     {
-      name: 'TypeScript',
-      class: 'devicon-typescript-plain',
-      select: false
+      "name": "React",
+      "class": "devicon-react-original",
+      "select": true
     },
     {
-      name: 'JavaScript',
-      class: 'devicon-javascript-plain',
-      select: false
+      "name": "Express",
+      "class": "devicon-express-original colored",
+      "select": true
     },
     {
-      name: 'Sass',
-      class: 'devicon-sass-original',
-      select: false
+      "name": "C++",
+      "class": "devicon-cplusplus-line",
+      "select": true
     },
     {
-      name: 'Bootstrap',
-      class: 'devicon-bootstrap-plain',
-      select: false
+      "name": "C",
+      "class": "devicon-c-line",
+      "select": true
     },
     {
-      name: 'C#',
-      class: 'devicon-csharp-plain',
-      select: false
-    },
-    {
-      name: 'MySql',
-      class: 'devicon-mysql-plain',
-      select: false
+      "name": "Angular",
+      "class": "devicon-angularjs-plain",
+      "select": false
     }
   ]
 }
